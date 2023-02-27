@@ -10,7 +10,7 @@ public class MainContact
     	LinkedList obj = new LinkedList();
     	while(true)
     	{
-    		logger.info("Choose Option:\n1.Add\n2.Add Position\n3.Remove\n4.Search\n5.Print\n6.exit");
+    		logger.info("Choose Option:\n1.Add\n2.Remove\n3.Search\n4.Print\n5.exit");
     		int op = sc.nextInt();
     		switch(op)
     		{
@@ -27,38 +27,25 @@ public class MainContact
     			}
     			case 2:
     			{
-    				logger.info("Enter index::");
-    				int index = sc.nextInt();
     				logger.info("Enter Name:");
-    	    		String name = sc.next();
-    	    		logger.info("Enter Your Mobile Number:");
-    	    		long phone = sc.nextLong();
-    	    		logger.info("Enter Email ID:");
-    	    		String email = sc.next();
-    				obj.addElements(name,phone,email,index);
-    				break;
-    			}
-    			case 3:
-    			{
-    				logger.info("Enter index::");
-    				int index = sc.nextInt();
-    				obj.removeElement(index);
+    				String remname = sc.next();
+    				obj.removeElement(remname);
     				break;
     				
     			}
-    			case 5:
+    			case 3:
     			{
-    				obj.print();
-    				break;
-    			}
-    			case 4:
-    			{
-    				logger.info("Enter Name or Mail to search::");
+    				logger.info("Enter Name to search::");
     				String search = sc.next();
     				obj.search(search);
     				break;
     			}
-    			case 6:
+    			case 4:
+    			{
+    				obj.print();
+    				break;
+    			}
+    			case 5:
     			{
     				System.exit(0);
     				break;
