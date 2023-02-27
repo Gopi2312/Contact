@@ -55,7 +55,7 @@ class LinkedList{
 				logger.info(str);
 				temp = null;
 			}
-			else if(remname.equals(rootnode.name))
+			else if(remname.equals(temp.name))
 			{
 					mark=1;
 					logger.info(str);
