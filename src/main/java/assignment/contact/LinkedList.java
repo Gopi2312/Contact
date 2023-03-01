@@ -1,21 +1,9 @@
 package assignment.contact;
 import java.util.logging.Logger;
 class LinkedList{
-	Logger logger = Logger.getLogger("hio");
+    Logger logger = Logger.getLogger("hio");
     Node rootnode;
     int count = 0;
-    
-    public class Node {
-    	String name;
-    	long phone;
-    	String email;
-    	Node nextnode;
-    	Node(String name,long phone,String email){
-    		this.name = name;
-    		this.phone = phone;
-    		this.email = email;
-    	}
-    }
     LinkedList()
     {
     	rootnode = null;
@@ -121,8 +109,7 @@ class LinkedList{
     			logger.info(b);
     			logger.info(c);
     			temp1 = temp1.nextnode;
-    		}
-    		
+    		}	
     	}
     }
 }
